@@ -10,8 +10,8 @@ import telebot
 
 coloredlogs.install(level="DEBUG")
 
-bot = telebot.TeleBot('6311549088:AAE6ulyIrP7rTqBqvGTGuXUPEZL50dbR2Us')  # токен бота
-chat_id = -1002009849126  # id группы
+bot = telebot.TeleBot('XXXXX:YYYYYY')  # токен бота
+chat_id = -0000000000000  # id группы
 
 count_messages = 1  # кол-во последних отзывов товара
 
