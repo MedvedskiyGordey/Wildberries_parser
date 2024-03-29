@@ -8,14 +8,24 @@ import openpyxl
 import requests as requests
 import telebot
 
+from dotenv import load_dotenv, find_dotenv
+import os
+
+load_dotenv(find_dotenv())
+
+BOT_TOKEN = str(os.environ.get("BOT_TOKEN"))
+CHAT_ID = str(os.environ.get("CHAT_ID"))
+COUNT_MESSAGES = str(os.environ.get("COUNT_MESSAGES"))
+DELAY = str(os.environ.get("DELAY"))
+
 coloredlogs.install(level="DEBUG")
 
-bot = telebot.TeleBot('XXXXX:YYYYYY')  # токен бота
-chat_id = -0000000000000  # id группы
+bot = telebot.TeleBot(BOT_TOKEN)  # токен бота
+chat_id = CHAT_ID  # id группы
 
-count_messages = 1  # кол-во последних отзывов товара
+count_messages = COUNT_MESSAGES  # кол-во последних отзывов товара
 
-delay = 3600  # промежуток в секундах
+delay = DELAY # промежуток в секундах
 
 
 @bot.message_handler(content_types=['text'])

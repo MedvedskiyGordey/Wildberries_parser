@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  bot:
+    container_name: wb_parser_bot
+    build: 
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - "5678:5678" #for debug in container
+    volumes:
+      - '.:/app'

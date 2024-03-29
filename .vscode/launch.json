@@ -1,0 +1,27 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Отладчик Python: Удаленное подключение",
+			"type": "debugpy",
+			"request": "attach",
+			"connect": {
+				"host": "localhost",
+				"port": 5678
+			},
+			"pathMappings": [
+				{
+					"localRoot": "${workspaceFolder}",
+					"remoteRoot": "/app"
+				}
+			]
+		},
+		{
+			"name": "Run main file",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/main.py",
+			"justMyCode": true,
+		},
+	]
+}
